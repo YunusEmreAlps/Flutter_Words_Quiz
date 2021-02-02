@@ -1,0 +1,373 @@
+class Question {
+  final int id, answer;
+  final String question;
+  final List<String> options;
+
+  Question({this.id, this.question, this.answer, this.options});
+}
+
+const List sample_data = [
+  {
+    "id": 1,
+    "question": "What is the correct translation for \"telephone\"?",
+    "options": ['el agua', 'una bicicleta', 'el teléfono', 'un paraguas'],
+    "answer_index": 2,
+  },
+  {
+    "id": 2,
+    "question": "How do you say \"Good morning\"?",
+    "options": ['Buenas tardes', 'Adios', 'Buenas noches', 'Buenos días'],
+    "answer_index": 3,
+  },
+  {
+    "id": 3,
+    "question": "How do you say \"Good afternoon\"?",
+    "options": ['Buenas tardes', 'Buenos días', 'Adios', 'Buenas noches'],
+    "answer_index": 0,
+  },
+  {
+    "id": 4,
+    "question": "How do you say \"Good evening\"?",
+    "options": ['Buenas noches', 'Muchas gracias', 'Adios', 'unas llaves'],
+    "answer_index": 0,
+  },
+  {
+    "id": 5,
+    "question": "What is the correct translation for \"Please\"?",
+    "options": ['izquierda', 'Por favor', 'Perdón', 'Hola'],
+    "answer_index": 1,
+  },
+  {
+    "id": 6,
+    "question": "How do you say \"Thank You\"?",
+    "options": ['Adios', 'Gracias', 'Perdón', 'derecha'],
+    "answer_index": 1,
+  },
+  {
+    "id": 7,
+    "question": "What is the correct translation for \"Thank you very much\"?",
+    "options": ['No sé', 'Muchas gracias', '¡Perdón!', '¡Salud!'],
+    "answer_index": 1,
+  },
+  {
+    "id": 8,
+    "question": "How do you say \"Sorry\"?",
+    "options": ['Por favor', 'Perdón', 'No sé', 'Gracias'],
+    "answer_index": 1,
+  },
+  {
+    "id": 9,
+    "question": "How do you say \"Hello\"?",
+    "options": ['No sé', 'Por favor', 'Gracias', 'Hola'],
+    "answer_index": 3,
+  },
+  {
+    "id": 10,
+    "question": "How do you say \"Good-bye\"?",
+    "options": ['Buenas noches', 'izquierda', '¿Dónde está la playa?', 'Adios'],
+    "answer_index": 3,
+  },
+  {
+    "id": 11,
+    "question": "What is the correct translation for \"Monday\"?",
+    "options": ['Lunes', 'Martes', '¡Perdón!', '¡Salud!'],
+    "answer_index": 0,
+  },
+  {
+    "id": 12,
+    "question": "What is the correct translation for \"izquierda\"?",
+    "options": ['Hello', 'Train', 'Left', 'Right'],
+    "answer_index": 2,
+  },
+  {
+    "id": 13,
+    "question": "What is the correct translation for \"right\"?",
+    "options": ['tres', 'un tren', 'izquierda', 'derecha'],
+    "answer_index": 3,
+  },
+  {
+    "id": 14,
+    "question": "How do you say \"water\"?",
+    "options": ['el agua', 'un plato', 'la leche', 'un tazón'],
+    "answer_index": 0,
+  },
+  {
+    "id": 15,
+    "question": "How do you say \"milk\"?",
+    "options": ['el agua', 'un plato', 'la leche', 'un tazón'],
+    "answer_index": 2,
+  },
+  {
+    "id": 16,
+    "question": "What is the correct translation for \"hospital\"?",
+    "options": ['unas aspirinas', 'un hospital', 'una casa', 'el agua'],
+    "answer_index": 1,
+  },
+  {
+    "id": 17,
+    "question": "How do you say \"taxi\"?",
+    "options": ['un hospital', 'un taxi', 'un coche', 'una cama'],
+    "answer_index": 1,
+  },
+  {
+    "id": 18,
+    "question": "What is the correct translation for \"credit card\"?",
+    "options": ['un sobre', 'una tarjeta de crédito', 'un periódico', 'un libro'],
+    "answer_index": 1,
+  },
+  {
+    "id": 19,
+    "question": "What is the correct translation for \"keys\"?",
+    "options": ['unas llaves', 'unas tostadas', 'una cama', 'un cuchillo'],
+    "answer_index": 0,
+  },
+  {
+    "id": 20,
+    "question": "What is the correct translation for \"bicycle\"?",
+    "options": ['una cama', 'una bicicleta', 'un coche', 'un plato'],
+    "answer_index": 1,
+  },
+  {
+    "id": 21,
+    "question": "How do you say \"car\"?",
+    "options": ['un cuchillo', 'un tren', 'un coche', 'un barco'],
+    "answer_index": 2,
+  },
+  {
+    "id": 22,
+    "question": "How do you say \"train\"?",
+    "options": ['un coche', 'un barco', 'un avión', 'un tren'],
+    "answer_index": 3,
+  },
+  {
+    "id": 23,
+    "question": "How do you say \"car\"?",
+    "options": ['un cuchillo', 'un tren', 'un coche', 'un barco'],
+    "answer_index": 2,
+  },
+  {
+    "id": 24,
+    "question": "What is the correct translation for \"ship\"?",
+    "options": ['un barco', 'una bicicleta', 'un tren', 'un avión'],
+    "answer_index": 0,
+  },
+  {
+    "id": 25,
+    "question": "How do you say \"beach\"?",
+    "options": ['un pasaporte', 'el pescado', 'la playa', 'una casa'],
+    "answer_index": 2,
+  },
+  {
+    "id": 26,
+    "question": "What is the correct translation for \"house\"?",
+    "options": ['un hospital', 'el baño', 'una casa', 'un hotel'],
+    "answer_index": 2,
+  },
+  {
+    "id": 27,
+    "question": "What is the correct translation for \"hotel\"?",
+    "options": ['un hotel', 'una casa', 'la playa', 'una silla'],
+    "answer_index": 0,
+  },
+  {
+    "id": 28,
+    "question": "What is the correct translation for \"bread\"?",
+    "options": ['el pescado', 'una cebolla', 'el pan', 'unas patatas'],
+    "answer_index": 2,
+  },
+  {
+    "id": 29,
+    "question": "What is the correct translation for \"glass\"?",
+    "options": ['un tazón', 'un vaso', 'la coca cola', 'una taza'],
+    "answer_index": 1,
+  },
+  {
+    "id": 30,
+    "question": "What is the correct translation for \"fish\"?",
+    "options": ['una cebolla', 'el pescado', 'el maíz', 'una ciruela'],
+    "answer_index": 1,
+  },
+  {
+    "id": 31,
+    "question": "What is the correct translation for \"sweet corn\"?",
+    "options": ['el maíz', 'unas fresas', 'unas frambuesas', 'unas manzanas'],
+    "answer_index": 0,
+  },
+  {
+    "id": 32,
+    "question": "What is the correct translation for \"mango\"?",
+    "options": ['unas frambuesas', 'un mango', 'unas fresas', 'un plátano'],
+    "answer_index": 1,
+  },
+  {
+    "id": 33,
+    "question": "What is the correct translation for \"banana\"?",
+    "options": ['unas patatas', 'unas frambuesas', 'el queso', 'un plátano'],
+    "answer_index": 3,
+  },
+  {
+    "id": 34,
+    "question": "What is the correct translation for \"apples\"?",
+    "options": ['una naranja', 'un pomelo', 'unas manzanas', 'unas fresas'],
+    "answer_index": 2,
+  },
+  {
+    "id": 35,
+    "question": "What is the correct translation for \"strawberry\"?",
+    "options": ['una naranja', 'una ciruela', 'unas fresas', 'un pomelo'],
+    "answer_index": 2,
+  },
+  {
+    "id": 36,
+    "question": "What is the correct translation for \"onion\"?",
+    "options": ['unos champiñones', 'un pepino', 'la mantequilla', 'una cebolla'],
+    "answer_index": 3,
+  },
+  {
+    "id": 37,
+    "question": "What is the correct translation for \"grapefruit\"?",
+    "options": ['una cebolla', 'un pomelo', 'el queso', 'unas frambuesas'],
+    "answer_index": 1,
+  },
+  {
+    "id": 38,
+    "question": "What is the correct translation for \"raspberries\"?",
+    "options": ['el queso', 'una circuela', 'unas frambuesas', 'un pomelo'],
+    "answer_index": 2,
+  },
+  {
+    "id": 39,
+    "question": "What is the correct translation for \"raspberries\"?",
+    "options": ['el queso', 'una circuela', 'unas frambuesas', 'un pomelo'],
+    "answer_index": 2,
+  },
+  {
+    "id": 40,
+    "question": "What is the correct translation for \"mushrooms\"?",
+    "options": ['unos champiñones', 'una circuela', 'el queso', 'un pomelo'],
+    "answer_index": 0,
+  },
+  {
+    "id": 41,
+    "question": "What is the correct translation for \"green\"?",
+    "options": ['rosa', 'blanco', 'amarillo', 'verde'],
+    "answer_index": 3,
+  },
+  {
+    "id": 42,
+    "question": "What is the correct translation for \"yellow\"?",
+    "options": ['amarillo', 'marrón', 'negro', 'verde'],
+    "answer_index": 0,
+  },
+  {
+    "id": 43,
+    "question": "What is the correct translation for \"white\"?",
+    "options": ['negro', 'rojo', 'azul', 'blanco'],
+    "answer_index": 3,
+  },
+  {
+    "id": 44,
+    "question": "What is the correct translation for \"pink\"?",
+    "options": ['rojo', 'rosa', 'verde', 'amarillo'],
+    "answer_index": 1,
+  },
+  {
+    "id": 45,
+    "question": "How do you say \"Where is the shop\"?",
+    "options": ['¿Dónde está la tienda?', '¿Dónde está la playa?', '¿Dónde puedo comprar un billete?', '¿Dónde está la estación de tren?'],
+    "answer_index": 0,
+  },
+  {
+    "id": 46,
+    "question": "How do you say \"Where is the beach\"?",
+    "options": ['¿Dónde puedo comprar un billete?', '¿Dónde está la estación de tren?', '¿Dónde está la tienda?', '¿Dónde está la playa?'],
+    "answer_index": 3,
+  },
+  {
+    "id": 47,
+    "question": "How do you say \"I need a doctor\"?",
+    "options": ['¿Dónde está la playa?', 'La cuenta, por favor', 'No sé', 'Necesito un médico'],
+    "answer_index": 3,
+  },
+  {
+    "id": 48,
+    "question": "What is the correct translation for \"head\"?",
+    "options": ['la pierna', 'el pelo', 'una oreja', 'la cabeza'],
+    "answer_index": 3,
+  },
+  {
+    "id": 49,
+    "question": "What is the correct translation for \"leg\"?",
+    "options": ['la pierna', 'un ojo', 'la nariz', 'la cabeza'],
+    "answer_index": 0,
+  },
+  {
+    "id": 50,
+    "question": "What is the correct translation for \"foot\"?",
+    "options": ['un ojo', 'el pie', 'la pierna', 'una oreja'],
+    "answer_index": 1,
+  },
+  {
+    "id": 51,
+    "question": "What is the correct translation for \"two\"?",
+    "options": ['cinco', 'tres', 'dos', 'cuatro'],
+    "answer_index": 2,
+  },
+  {
+    "id": 52,
+    "question": "What is the correct translation for \"four\"?",
+    "options": ['uno', 'siete', 'ocho', 'cuatro'],
+    "answer_index": 3,
+  },
+  {
+    "id": 53,
+    "question": "What is the correct translation for \"ten\"?",
+    "options": ['diez', 'dos', 'nueve', 'once'],
+    "answer_index": 0,
+  },
+  {
+    "id": 54,
+    "question": "How do you say \"five o'clock\"?",
+    "options": ['las ocho en punto', 'las diez en punto', 'las cinco en punto', 'las seis en punto'],
+    "answer_index": 2,
+  },
+  {
+    "id": 55,
+    "question": "How do you say \"six o'clock\"?",
+    "options": ['las tres en punto', 'las cinco en punto', 'las siete en punto', 'las seis en punto'],
+    "answer_index": 3,
+  },
+  {
+    "id": 56,
+    "question": "What is the correct translation for \"pen\"?",
+    "options": ['un paraguas', 'un lápiz', 'un bolígrafo', 'un reloj'],
+    "answer_index": 2,
+  },
+  {
+    "id": 57,
+    "question": "What is the correct translation for \"pencil\"?",
+    "options": ['un paraguas', 'un lápiz', 'un bolígrafo', 'un reloj'],
+    "answer_index": 1,
+  },
+  {
+    "id": 58,
+    "question": "What is the correct translation for \"book\"?",
+    "options": ['un sobre', 'un libro', 'un bolígrafo', 'un sombrero'],
+    "answer_index": 1,
+  },
+  {
+    "id": 59,
+    "question": "What is the correct translation for \"toothpaste\"?",
+    "options": ['un cepillo de dientes', 'un cepillo del pelo', 'una toalla', 'la pasta de dientes'],
+    "answer_index": 3,
+  },
+  {
+    "id": 60,
+    "question": "What is the correct translation for \"toothbrush\"?",
+    "options": ['un cepillo de dientes', 'un cepillo del pelo', 'una toalla', 'la pasta de dientes'],
+    "answer_index": 0,
+  },
+];
+
+
+
