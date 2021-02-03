@@ -2,15 +2,14 @@
 
 A new Flutter application.
 
-## Getting Started
+## Screenshots 📷
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+| Light Mode  | Dark Mode |
+| ------------- |:-------------:|
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/1.jpg)| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/2.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/3.jpg) | ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/4.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/5.jpg) | ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/6.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/7.jpg)| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/8.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/9.jpg) | ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/10.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/11.jpg) | ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/12.jpg) |
+| ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/13.jpg) | ![alt text](https://github.com/YunusEmreAlps/Flutter_Words_Quiz/blob/master/my_resume/ss/14.jpg) |

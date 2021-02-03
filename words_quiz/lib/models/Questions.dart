@@ -6,6 +6,7 @@ class Question {
   Question({this.id, this.question, this.answer, this.options});
 }
 
+// Spanish Beginners
 const List sample_data = [
   {
     "id": 1,
@@ -141,8 +142,8 @@ const List sample_data = [
   },
   {
     "id": 23,
-    "question": "How do you say \"car\"?",
-    "options": ['un cuchillo', 'un tren', 'un coche', 'un barco'],
+    "question": "How do you say \"The girl\"?",
+    "options": ['la mujer', 'el hombre', 'la nina', 'el nino'],
     "answer_index": 2,
   },
   {
@@ -237,9 +238,9 @@ const List sample_data = [
   },
   {
     "id": 39,
-    "question": "What is the correct translation for \"raspberries\"?",
-    "options": ['el queso', 'una circuela', 'unas frambuesas', 'un pomelo'],
-    "answer_index": 2,
+    "question": "What is the correct translation for \"cucumber\"?",
+    "options": ['un pepino', 'una camote', 'un tomate', 'un pomelo'],
+    "answer_index": 0,
   },
   {
     "id": 40,
@@ -274,13 +275,13 @@ const List sample_data = [
   {
     "id": 45,
     "question": "How do you say \"Where is the shop\"?",
-    "options": ['¿Dónde está la tienda?', '¿Dónde está la playa?', '¿Dónde puedo comprar un billete?', '¿Dónde está la estación de tren?'],
+    "options": ['¿Dónde está la tienda?', '¿Dónde está la playa?', '¿Dónde está mi pasaporte?', '¿Dónde está el profesor?'],
     "answer_index": 0,
   },
   {
     "id": 46,
     "question": "How do you say \"Where is the beach\"?",
-    "options": ['¿Dónde puedo comprar un billete?', '¿Dónde está la estación de tren?', '¿Dónde está la tienda?', '¿Dónde está la playa?'],
+    "options": ['¿Donde está el museo?', '¿Dónde está la estación?', '¿Dónde está la tienda?', '¿Dónde está la playa?'],
     "answer_index": 3,
   },
   {
@@ -367,7 +368,246 @@ const List sample_data = [
     "options": ['un cepillo de dientes', 'un cepillo del pelo', 'una toalla', 'la pasta de dientes'],
     "answer_index": 0,
   },
+  {
+    "id": 61,
+    "question": "What is the correct translation for \"Tuesday\"?",
+    "options": ['Lunes', 'Miercoles', 'Martes', 'Sabado'],
+    "answer_index": 2,
+  },
+  {
+    "id": 62,
+    "question": "What is the correct translation for \"Wednesday\"?",
+    "options": ['Domingo', 'Miercoles', 'Martes', 'Sabado'],
+    "answer_index": 1,
+  },
+  {
+    "id": 63,
+    "question": "What is the correct translation for \"Thursday\"?",
+    "options": ['Jueves', 'Miercoles', 'Martes', 'Sabado'],
+    "answer_index": 0,
+  },
+  {
+    "id": 64,
+    "question": "What is the correct translation for \"Friday\"?",
+    "options": ['Jueves', 'Viernes', 'Miercoles', 'Sabado'],
+    "answer_index": 1,
+  },
+  {
+    "id": 65,
+    "question": "What is the correct translation for \"Saturday\"?",
+    "options": ['Jueves', 'Viernes', 'Domingo', 'Sabado'],
+    "answer_index": 3,
+  },
+  {
+    "id": 66,
+    "question": "What is the correct translation for \"Sunday\"?",
+    "options": ['Jueves', 'Domingo', 'Miercoles', 'Sabado'],
+    "answer_index": 1,
+  },
+  {
+    "id": 67,
+    "question": "What is the correct translation for \"Queso\"?",
+    "options": ['Turkey', 'Chicken', 'Cheese', 'Right'],
+    "answer_index": 2,
+  },
+  {
+    "id": 68,
+    "question": "What is the correct translation for \"Bueno\"?",
+    "options": ['Funny', 'Good', 'Fun', 'Open'],
+    "answer_index": 1,
+  },
+  {
+    "id": 69,
+    "question": "What is the correct translation for \"Sesenta\"?",
+    "options": ['Sixty', 'Open', 'Eighty', 'Seventy'],
+    "answer_index": 0,
+  },
+  {
+    "id": 70,
+    "question": "What is the correct translation for \"Caja sorpresa\"?",
+    "options": ['Jumbo', 'Open', 'Huh', 'Jack-in-the-box'],
+    "answer_index": 3,
+  },
+  {
+    "id": 71,
+    "question": "What is the correct translation for \"tomato\"?",
+    "options": ['un pepino', 'una tomate', 'una camote', 'un pomelo'],
+    "answer_index": 1,
+  },
+  {
+    "id": 72,
+    "question": "What is the correct translation for \"cabbage\"?",
+    "options": ['una col', 'una tomate', 'una camote', 'una coliflor'],
+    "answer_index": 0,
+  },
+  {
+    "id": 73,
+    "question": "What is the correct translation for \"broccoli\"?",
+    "options": ['una col', 'una coliflor', 'un brócoli', 'un pomelo'],
+    "answer_index": 2,
+  },
+  {
+    "id": 74,
+    "question": "What is the correct translation for \"lettuce\"?",
+    "options": ['una col', 'una coliflor', 'un brócoli', 'una lechuga'],
+    "answer_index": 3,
+  },
+  {
+    "id": 75,
+    "question": "What is the correct translation for \"pepper\"?",
+    "options": ['una col', 'un pimiento', 'un brócoli', 'una lechuga'],
+    "answer_index": 1,
+  },
+  {
+    "id": 76,
+    "question": "What is the correct translation for \"pea\"?",
+    "options": ['una col', 'un pimiento', 'un brócoli', 'un chícharro'],
+    "answer_index": 3,
+  },
+  {
+    "id": 77,
+    "question": "What is the correct translation for \"the bell rings\"?",
+    "options": ['la ventana', 'un triangulo', 'el ombligo', 'la campana suena'],
+    "answer_index": 3,
+  },
+  {
+    "id": 78,
+    "question": "What is the correct translation for \"horse\"?",
+    "options": ['el caballo', 'la botella', 'el martillo', 'el regalo'],
+    "answer_index": 0,
+  },
+  {
+    "id": 79,
+    "question": "What is the correct translation for \"meanwhile\"?",
+    "options": ['diciembre', 'suelta de', 'mientras', 'enero'],
+    "answer_index": 2,
+  },
+  {
+    "id": 80,
+    "question": "What is the correct translation for \"dog\"?",
+    "options": ['el pelo', 'el gato', 'el cuello', 'el perro'],
+    "answer_index": 3,
+  },
+  {
+    "id": 81,
+    "question": "What is the correct translation for \"cat\"?",
+    "options": ['el pelo', 'el gato', 'el cuello', 'el perro'],
+    "answer_index": 1,
+  },
+  {
+    "id": 82,
+    "question": "What is the correct translation for \"march\"?",
+    "options": ['marzo', 'mayo', 'enero', 'abril'],
+    "answer_index": 0,
+  },
+  {
+    "id": 83,
+    "question": "What is the correct translation for \"febuary\"?",
+    "options": ['enero', 'octubre', 'agosto', 'febrero'],
+    "answer_index": 3,
+  },
+  {
+    "id": 84,
+    "question": "What is the correct translation for \"april\"?",
+    "options": ['junio', 'julio', 'marzo', 'abril'],
+    "answer_index": 3,
+  },
+  {
+    "id": 85,
+    "question": "What is the correct translation for \"july\"?",
+    "options": ['junio', 'julio', 'mayo', 'marzo'],
+    "answer_index": 1,
+  },
+  {
+    "id": 86,
+    "question": "What is the correct translation for \"Age\"?",
+    "options": ['La edad', 'Un abrazo', 'La toalla', 'Un beso'],
+    "answer_index": 0,
+  },
+  {
+    "id": 87,
+    "question": "What is the correct translation for \"Kiss\"?",
+    "options": ['La edad', 'Un abrazo', 'La tolla', 'Un beso'],
+    "answer_index": 3,
+  },
+  {
+    "id": 88,
+    "question": "How do you say \"¿Cómo se llama?\"?",
+    "options": ['How is it going?', 'What is your name?', 'Are you okay?', 'Where are you from?'],
+    "answer_index": 1,
+  },
+  {
+    "id": 89,
+    "question": "How do you say \"¿De dónde es usted?\"?",
+    "options": ['Where are you from?', 'Where is the bathroom?', 'Really?', 'How are you?'],
+    "answer_index": 0,
+  },
+  {
+    "id": 90,
+    "question": "How do you say \"¿De dónde eres?\"?",
+    "options": ['Really?', 'How is it going?', 'Where is the bathroom?', 'Where are you from?'],
+    "answer_index": 3,
+  },
+  {
+    "id": 91,
+    "question": "How do you say \"¿Que tal?\"?",
+    "options": ['Really?', 'How is it going?', 'Where is the bathroom?', 'Where are you from?'],
+    "answer_index": 1,
+  },
+  {
+    "id": 92,
+    "question": "How do you say \"¿Tu crees?\"?",
+    "options": ['Do you think so?', 'How much is it?', 'What is it?', 'Where are you from?'],
+    "answer_index": 0,
+  },
+  {
+    "id": 93,
+    "question": "How do you say \"¿De veras?\"?",
+    "options": ['Really?', 'Huh?', 'Do you think so?', 'How much is it?'],
+    "answer_index": 0,
+  },
+  {
+    "id": 94,
+    "question": "How do you say \"¿Cuanto cuesta?\"?",
+    "options": ['Really?', 'Huh?', 'Do you think so?', 'How much is it?'],
+    "answer_index": 3,
+  },
+  {
+    "id": 95,
+    "question": "How do you say \"No comprendo\"?",
+    "options": ['I need a Doctor', 'Not at all', 'I\'m sorry', 'I don\'t understand'],
+    "answer_index": 3,
+  },
+  {
+    "id": 96,
+    "question": "How do you say \"De ninguna manera\"?",
+    "options": ['I need a Doctor', 'No way', 'Same here', 'I don\'t understand'],
+    "answer_index": 1,
+  },
+  {
+    "id": 97,
+    "question": "How do you say \"Yo iqual\"?",
+    "options": ['I need a Doctor', 'Not at all', 'Same here', 'I don\'t understand'],
+    "answer_index": 2,
+  },
+  {
+    "id": 98,
+    "question": "How do you say \"Me gusta\"?",
+    "options": ['I\' sorry', 'Not at all', 'I don\'t speak Spanish', 'I like it'],
+    "answer_index": 3,
+  },
+  {
+    "id": 99,
+    "question": "How do you say \"Mucho gusto\"?",
+    "options": ['Nice to meet you', 'Not at all', 'I don\'t speak Spanish', 'I like it'],
+    "answer_index": 0,
+  },
+  {
+    "id": 100,
+    "question": "How do you say \"No hablo espanol\"?",
+    "options": ['Nice to meet you', 'Not at all', 'I don\'t speak Spanish', 'I like it'],
+    "answer_index": 2,
+  },
 ];
-
 
 

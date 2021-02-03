@@ -14,7 +14,7 @@ class _NumberTimerState extends State<NumberTimer>
     with TickerProviderStateMixin<NumberTimer> {
   AnimationController controller;
   Animation<double> scaleAnimation;
-  int count = 5;
+  int count = 6;
   @override
   void initState() {
     super.initState();
