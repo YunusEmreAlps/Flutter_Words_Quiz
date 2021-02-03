@@ -37,7 +37,7 @@ class ScoreScreen extends StatelessWidget {
                     .copyWith(color: kSecondaryColor),
               ),
               Text(
-                message(_qnController.numOfCorrectAns, _qnController.questions.length),
+                message(_qnController.numOfCorrectAns),
                 style: Theme.of(context)
                     .textTheme
                     .headline5
@@ -51,7 +51,7 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-    // Fluttter show the back button automatically
+  // Fluttter show the back button automatically
   AppBar buildAppBar(BuildContext context) {
     return AppBar(
       backgroundColor: Colors.transparent,
@@ -59,14 +59,13 @@ class ScoreScreen extends StatelessWidget {
       centerTitle: true,
       title: Text.rich(
         TextSpan(
-          text:"Words Quiz",
+          text: "Words Quiz",
           style: TextStyle(
             color: Theme.of(context).accentColor,
             fontSize: 22, // 22
             fontFamily: 'NexaLight',
             letterSpacing: 2,
           ),
-
         ),
       ),
       actions: [buildAddButton(context)],
@@ -93,10 +92,16 @@ class ScoreScreen extends StatelessWidget {
     );
   }
 
-  String message(int score, int number_of_question){
-    if ((score) > (number_of_question / 2))
-      return "Congratulations";
+  String message(int score) {
+    if (score >= 81)
+      return "You are awesome!";
+    else if (score >= 61)
+      return "Pretty likeable!";
+    else if (score >= 41)
+      return "You need to work more!";
+    else if (score >= 21)
+      return "You need to work hard!";
     else
-      return "You  Should Try Hard...";
+      return "This is a poor score!";
   }
 }
