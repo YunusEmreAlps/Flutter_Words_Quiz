@@ -30,7 +30,7 @@ class _QuizScreenState extends State<QuizScreen> {
       extendBodyBehindAppBar: true,
       appBar: buildAppBar(context),
       body: Body(),
-      resizeToAvoidBottomPadding: false, // RenderFlex error solution
+      resizeToAvoidBottomInset: false, // RenderFlex error solution
     );
   }
   
